@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('Initialize') {
+            steps {
+                echo 'Starting FastAPI CI/CD Pipeline...'
+                sh 'python -m venv myenv' 
+                sh '. myenv/bin/activate' 
+            }
+        }
         stage('Checkout') {
             steps {
                 git branch: 'main', url: 'https://github.com/bmuia/jenkins-project.git'
