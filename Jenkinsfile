@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourname/your-fastapi-repo.git'
+                git 'https://github.com/bmuia/jenkins-project.git'
             }
         }
 
